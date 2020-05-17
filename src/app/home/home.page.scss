@@ -8,6 +8,11 @@
   transform: translateY(-50%);
 
   height: 100%;
+
+  overflow: hidden;
+}
+
+.scroll {
   overflow: scroll !important;
 }
 
@@ -16,13 +21,16 @@
   line-height: 26px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+#container ngx-typed-js {
+  font-family: 'Arcade Classic';
+  color: #ffffff;
+  font-size: 24px;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #container a {
@@ -54,12 +62,12 @@
 
 .character {
   position: sticky;
-  left: calc(50% - 10vh);
+  left: calc(50% - 5vh);
   top: 87vh;
   width: 10vh;
   height: 10vh;
   animation: moveX 3s steps(24) infinite;
-  z-index: 10000;
+  z-index: 3;
   image-rendering: pixelated;
 
   &.run-r {
@@ -81,6 +89,18 @@
     background-image : url("../../assets/character/character-idle-l.png");
     background-size: cover;
   }
+}
+
+.shadow {
+  position: sticky;
+  left: calc(50% - 5vh);
+  top: 87vh;
+  width: 10vh;
+  height: 10vh;
+  z-index: 2;
+  image-rendering: pixelated;
+  background-image : url("../../assets/character/shadow.png");
+  background-size: cover;
 }
 
 @keyframes moveX{

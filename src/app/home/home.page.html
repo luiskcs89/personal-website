@@ -1,5 +1,5 @@
 <ion-content [fullscreen]="true">
-  <div id="container">
+  <div id="container" [class.scroll]="allowScroll">
     <div class="bkg far" appParallax [ratio]="-0.5">
 
     </div>
@@ -10,6 +10,11 @@
 
     </div>
 
+    <ngx-typed-js [strings]="typeString" [cursorChar]="'_'" [typeSpeed]="40" (completed)="setAllowScroll(true)">
+      <div class="typing"></div>
+    </ngx-typed-js>
+
     <div class="character idle-r" appCharacter></div>
+    <div class="shadow"></div>
   </div>
 </ion-content>
