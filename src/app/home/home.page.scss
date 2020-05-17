@@ -6,6 +6,9 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+
+  height: 100%;
+  overflow: scroll !important;
 }
 
 #container strong {
@@ -24,4 +27,63 @@
 
 #container a {
   text-decoration: none;
+}
+
+.bkg {
+  position: absolute;
+  height: 100%;
+  image-rendering: pixelated;
+  width: 5000vw;
+
+  &.far {
+    background: url("../../assets/backgrounds/far-buildings.png") repeat center;
+    background-size: contain;
+  }
+
+  &.middle {
+    background: url("../../assets/backgrounds/back-buildings.png") repeat center;
+    background-size: contain;
+  }
+
+  &.foreground {
+    background: url("../../assets/backgrounds/foreground.png") repeat center;
+    background-size: contain;
+  }
+}
+
+
+.character {
+  position: sticky;
+  left: calc(50% - 10vh);
+  top: 87vh;
+  width: 10vh;
+  height: 10vh;
+  animation: moveX 3s steps(24) infinite;
+  z-index: 10000;
+  image-rendering: pixelated;
+
+  &.run-r {
+    background-image : url("../../assets/character/character-run-r.png");
+    background-size: cover;
+  }
+
+  &.idle-r {
+    background-image : url("../../assets/character/character-idle-r.png");
+    background-size: cover;
+  }
+
+  &.run-l {
+    background-image : url("../../assets/character/character-run-l.png");
+    background-size: cover;
+  }
+
+  &.idle-l {
+    background-image : url("../../assets/character/character-idle-l.png");
+    background-size: cover;
+  }
+}
+
+@keyframes moveX{
+  from{background-position-x:0px;}
+  to{background-position-x:-240vh;}
 }
