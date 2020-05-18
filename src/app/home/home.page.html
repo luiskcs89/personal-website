@@ -10,11 +10,19 @@
 
     </div>
 
-    <ngx-typed-js [strings]="typeString" [cursorChar]="'_'" [typeSpeed]="40" (completed)="setAllowScroll(true)">
+    <ngx-typed-js class="intro" [strings]="typeString" [cursorChar]="'_'" [typeSpeed]="40" (completed)="setAllowScroll(true)">
       <div class="typing"></div>
     </ngx-typed-js>
 
     <div class="character idle-r" appCharacter></div>
     <div class="shadow"></div>
   </div>
+
+  <button class="blue"></button>
+
+  <button class="green"></button>
+
+  <button class="red"></button>
+
+  <button class="yellow"></button>
 </ion-content>

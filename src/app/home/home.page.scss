@@ -31,6 +31,11 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+  text-shadow: 2px 2px #222428;
+
+  &.intro {
+    transform: translateY(calc(-50% - 85px));
+  }
 }
 
 #container a {
@@ -59,6 +64,81 @@
   }
 }
 
+.blue {
+  background: url("../../assets/buttons/blue.png") repeat center;
+  background-size: contain;
+  z-index: 3;
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(calc(-50% - 111px), 50%);
+
+  width: 64px;
+  height: 64px;
+}
+
+.blue:focus {
+  background: url("../../assets/buttons/blue_pressed.png") repeat center;
+  background-size: contain;
+}
+
+.green {
+  background: url("../../assets/buttons/green.png") repeat center;
+  background-size: contain;
+  z-index: 3;
+  position: absolute;
+  
+  left: 50%;
+  top: 50%;
+  transform: translate(calc(-50% - 37px), 50%);
+
+  width: 64px;
+  height: 64px;
+}
+
+.green:focus {
+  background: url("../../assets/buttons/green_pressed.png") repeat center;
+  background-size: contain;
+}
+
+.red {
+  background: url("../../assets/buttons/red.png") repeat center;
+  background-size: contain;
+  z-index: 3;
+  position: absolute;
+  
+  left: 50%;
+  top: 50%;
+  transform: translate(calc(-50% + 37px), 50%);
+
+  width: 64px;
+  height: 64px;
+}
+
+.red:focus {
+  background: url("../../assets/buttons/red_pressed.png") repeat center;
+  background-size: contain;
+}
+
+.yellow {
+  background: url("../../assets/buttons/yellow.png") repeat center;
+  background-size: contain;
+  z-index: 3;
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(calc(-50% + 111px), 50%);
+
+  width: 64px;
+  height: 64px;
+}
+
+.yellow:focus {
+  background: url("../../assets/buttons/yellow_pressed.png") repeat center;
+  background-size: contain;
+}
 
 .character {
   position: sticky;
