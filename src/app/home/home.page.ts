@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Animation, AnimationController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -8,11 +9,17 @@ import { Animation, AnimationController } from '@ionic/angular';
 })
 export class HomePage implements OnInit {
 
-  typeString = [`Hi,  I  am  LuisK,  mobile  and  web  app  architect  and  plant  based  marathoner.<br>
-  Welcome  to  my  website!<br>
-  Scroll right to run or click a button and Dino will make a sprint to reach the desired section.<br>
-  He is pretty fast!`];
-  allowScroll = false;
+  typeStringIntro = null;
+
+  typeStringCoding = null;
+
+  typeStringRunning = null;
+
+  typeStringCooking = null;
+
+  typeStringCredits = null;
+
+  allowScroll = true;
 
   homeButtonAnimToTop: Animation;
   homeButtonOnTop = false;
@@ -26,15 +33,63 @@ export class HomePage implements OnInit {
   plantButtonAnimToTop: Animation;
   plantButtonOnTop = false;
 
-  constructor(private animationCtrl: AnimationController) {
+  introAnimFadeOut: Animation;
+  introFadedOut = false;
+
+  showCoding = false;
+  codingAnimFadeOut: Animation;
+  codingFadedOut = false;
+
+  showRunning = false;
+  runningAnimFadeOut: Animation;
+  runningFadedOut = false;
+
+  showCooking = false;
+  cookingAnimFadeOut: Animation;
+  cookingFadedOut = false;
+
+  showCredits = false;
+  creditsAnimFadeOut: Animation;
+  creditsFadedOut = false;
+
+  constructor(private animationCtrl: AnimationController, private translate: TranslateService) {
+
+    translate.get('PAGES.HOME.INTRO').subscribe((res: string) => {
+      this.typeStringIntro = [res];
+    });
+
+    translate.get('PAGES.HOME.CODING').subscribe((res: string) => {
+      this.typeStringCoding = [res];
+    });
+
+    translate.get('PAGES.HOME.RUNNING').subscribe((res: string) => {
+      this.typeStringRunning = [res];
+    });
+
+    translate.get('PAGES.HOME.COOKING').subscribe((res: string) => {
+      this.typeStringCooking = [res];
+    });
+
+    translate.get('PAGES.HOME.CREDITS').subscribe((res: string) => {
+      this.typeStringCredits = [res];
+    });
   }
 
   ngOnInit() {
-    this.creatAnimations();
+    this.createAnimations();
     document.getElementById('container').addEventListener('scroll', (event) => {
       console.log((event.target as HTMLElement).scrollLeft);
 
       const currentScroll = (event.target as HTMLElement).scrollLeft;
+
+      if (currentScroll > 8000) {
+        (event.target as HTMLElement).scrollTo(8000, 0);
+        this.allowScroll = false;
+      } else {
+        this.allowScroll = true;
+      }
+
+      // Home
       if (currentScroll === 0) {
         if (this.homeButtonOnTop) {
           this.homeButtonOnTop = false;
@@ -55,9 +110,14 @@ export class HomePage implements OnInit {
           this.plantButtonOnTop = false;
           this.plantButtonAnimToTop.direction('reverse').play();
         }
+
+        if (this.introFadedOut) {
+          this.introFadedOut = false;
+          this.introAnimFadeOut.direction('reverse').play();
+        }
       }
 
-      if (currentScroll > 0) {
+      if (currentScroll > 60) {
         if (!this.homeButtonOnTop) {
           this.homeButtonOnTop = true;
           this.homeButtonAnimToTop.direction('normal').play();
@@ -77,12 +137,137 @@ export class HomePage implements OnInit {
           this.plantButtonOnTop = true;
           this.plantButtonAnimToTop.direction('normal').play();
         }
+
+        if (!this.introFadedOut) {
+          this.introFadedOut = true;
+          this.introAnimFadeOut.direction('normal').play();
+        }
+      }
+
+      // Coding
+      if (currentScroll >= 1500) {
+        this.showCoding = true;
+
+        if (!this.codingAnimFadeOut) {
+          setTimeout(() => {
+            if (!this.codingAnimFadeOut) {
+              this.codingAnimFadeOut = this.animationCtrl.create()
+              .addElement(document.querySelector('.coding'))
+              .duration(2500)
+              .fromTo('opacity', '1', '0');
+            }
+          }, 100);
+        }
+      }
+
+      if (currentScroll >= 1500 && currentScroll <= 2500) {
+        if (this.codingFadedOut && this.codingAnimFadeOut) {
+            this.codingFadedOut = false;
+            this.codingAnimFadeOut.direction('reverse').play();
+        }
+      }
+
+      if (currentScroll < 1500 || currentScroll > 2500) {
+        if (!this.codingFadedOut && this.codingAnimFadeOut) {
+          this.codingFadedOut = true;
+          this.codingAnimFadeOut.direction('normal').play();
+        }
+      }
+
+      // Running
+      if (currentScroll >= 3500) {
+        this.showRunning = true;
+
+        if (!this.runningAnimFadeOut) {
+          setTimeout(() => {
+            if (!this.runningAnimFadeOut) {
+              this.runningAnimFadeOut = this.animationCtrl.create()
+              .addElement(document.querySelector('.running'))
+              .duration(1000)
+              .fromTo('opacity', '1', '0');
+            }
+          }, 100);
+        }
+      }
+
+      if (currentScroll >= 3500 && currentScroll <= 4500) {
+        if (this.runningFadedOut && this.runningAnimFadeOut) {
+            this.runningFadedOut = false;
+            this.runningAnimFadeOut.direction('reverse').play();
+        }
+      }
+
+      if (currentScroll < 3500 || currentScroll > 4500) {
+        if (!this.runningFadedOut && this.runningAnimFadeOut) {
+          this.runningFadedOut = true;
+          this.runningAnimFadeOut.direction('normal').play();
+        }
+      }
+
+      // Cooking
+      if (currentScroll >= 5500) {
+        this.showCooking = true;
+
+        if (!this.cookingAnimFadeOut) {
+          setTimeout(() => {
+            if (!this.cookingAnimFadeOut) {
+              this.cookingAnimFadeOut = this.animationCtrl.create()
+              .addElement(document.querySelector('.cooking'))
+              .duration(1000)
+              .fromTo('opacity', '1', '0');
+            }
+          }, 100);
+        }
+      }
+
+      if (currentScroll >= 5500 && currentScroll <= 6500) {
+        if (this.cookingFadedOut && this.cookingAnimFadeOut) {
+            this.cookingFadedOut = false;
+            this.cookingAnimFadeOut.direction('reverse').play();
+        }
+      }
+
+      if (currentScroll < 5500 || currentScroll > 6500) {
+        if (!this.cookingFadedOut && this.cookingAnimFadeOut) {
+          this.cookingFadedOut = true;
+          this.cookingAnimFadeOut.direction('normal').play();
+        }
+      }
+
+      // Credits
+      if (currentScroll >= 7500) {
+        this.showCredits = true;
+
+        if (!this.creditsAnimFadeOut) {
+          setTimeout(() => {
+            if (!this.creditsAnimFadeOut) {
+              this.creditsAnimFadeOut = this.animationCtrl.create()
+              .addElement(document.querySelector('.credits'))
+              .duration(1000)
+              .fromTo('opacity', '1', '0');
+            }
+          }, 100);
+        }
+      }
+
+      if (currentScroll >= 7500 && currentScroll <= 8500) {
+        if (this.creditsFadedOut && this.creditsAnimFadeOut) {
+            this.creditsFadedOut = false;
+            this.creditsAnimFadeOut.direction('reverse').play();
+        }
+      }
+
+      if (currentScroll < 7500 || currentScroll > 8500) {
+        if (!this.creditsFadedOut && this.creditsAnimFadeOut) {
+          this.creditsFadedOut = true;
+          this.creditsAnimFadeOut.direction('normal').play();
+        }
       }
 
     });
   }
 
-  creatAnimations() {
+  createAnimations() {
     this.homeButtonAnimToTop = this.animationCtrl.create()
     .addElement(document.querySelector('.blue'))
     .duration(1000)
@@ -110,9 +295,34 @@ export class HomePage implements OnInit {
     .fromTo('left', '50%', '232px')
     .fromTo('top', '50%', '10px')
     .fromTo('transform', 'translate(calc(-50% + 111px), 50%)', 'translate(0)');
+
+    this.introAnimFadeOut = this.animationCtrl.create()
+    .addElement(document.querySelector('.intro'))
+    .duration(1000)
+    .fromTo('opacity', '1', '0');
   }
 
   setAllowScroll(allow) {
     this.allowScroll = allow;
+  }
+
+  runTo(position) {
+    const container = document.getElementById('container');
+
+    if (container.scrollLeft < position) {
+      const interval = setInterval(() => {
+        container.scrollTo(container.scrollLeft + 10, 0);
+        if (container.scrollLeft >= position) {
+          clearInterval(interval);
+        }
+      }, 1);
+    } else {
+      const interval = setInterval(() => {
+        container.scrollTo(container.scrollLeft - 10, 0);
+        if (container.scrollLeft <= position) {
+          clearInterval(interval);
+        }
+      }, 1);
+    }
   }
 }

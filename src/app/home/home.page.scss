@@ -21,8 +21,8 @@
   line-height: 26px;
 }
 
-#container ngx-typed-js {
-  font-family: 'Arcade Classic';
+#container .section {
+  font-family: 'PixelSplitter-Bold';
   color: #ffffff;
   font-size: 24px;
   z-index: 1;
@@ -31,22 +31,111 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  text-shadow: 2px 2px #222428;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+  @media (max-width: 1000px) {
+    font-size: 16px;
+  }
 
   &.intro {
     transform: translateY(calc(-50% - 85px));
   }
+
+  &.coding {
+    left: 2000px;
+    width: 100%;
+
+    button {
+      font-size: 20px;
+      background: #72ce4b;
+      border: solid 2px #88e15f;
+      color: #ffffff;
+      padding: 5px;
+    }
+  }
+
+  &.running {
+    left: 4000px;
+    width: 100%;
+
+    button {
+      font-size: 20px;
+      background: #e86a16;
+      border: solid 2px #fa8132;
+      color: #ffffff;
+      padding: 5px;
+    }
+  }
+
+  &.cooking {
+    left: 6000px;
+    width: 100%;
+
+    button {
+      font-size: 20px;
+      background: #ffcd00;
+      border: solid 2px #ffd948;
+      color: #ffffff;
+      padding: 5px;
+    }
+  }
+
+  &.credits {
+    left: 8000px;
+    width: 100%;
+  }
 }
 
-#container a {
-  text-decoration: none;
+.openforge {
+  color: #E88212;
+}
+
+.fade-img {
+  position: relative;
+  margin: 0 auto;
+  height: 30vw;
+  width: 30vw;
+  border: solid 20px;
+
+  @media (max-width: 640px) {
+    height: 60vw;
+    width: 60vw;
+  }
+
+  span {
+    position: absolute;
+    width: 100%;
+    bottom: -20px;
+    left: 0;
+    color: #000000;
+    text-shadow: none;
+    font-size: 16px;
+
+    @media (max-width: 1000px) {
+      font-size: 12px;
+      bottom: -18px;
+    }
+  }
+}
+
+.fade-img img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-img img.top:hover {
+  opacity:0;
 }
 
 .bkg {
   position: absolute;
   height: 100%;
   image-rendering: pixelated;
-  width: 5000vw;
+  width: 10000px;
 
   &.far {
     background: url("../../assets/backgrounds/far-buildings.png") repeat center;
@@ -186,4 +275,38 @@
 @keyframes moveX{
   from{background-position-x:0px;}
   to{background-position-x:-240vh;}
+}
+
+.contact {
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  height: 32px;
+}
+
+.mail {
+  background: url("../../assets/buttons/mail.png") repeat center;
+  background-size: contain;
+  z-index: 3;
+  width: 32px;
+  height: 32px;
+  margin: 5px;
+}
+
+.linkedin {
+  background: url("../../assets/buttons/linkedin.png") repeat center;
+  background-size: contain;
+  z-index: 3;
+  width: 32px;
+  height: 32px;
+  margin: 5px;
+}
+
+.github {
+  background: url("../../assets/buttons/github.png") repeat center;
+  background-size: contain;
+  z-index: 3;
+  width: 32px;
+  height: 32px;
+  margin: 5px;
 }

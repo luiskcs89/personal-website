@@ -10,7 +10,53 @@
 
     </div>
 
-    <ngx-typed-js class="intro" [strings]="typeString" [cursorChar]="'_'" [typeSpeed]="40" (completed)="setAllowScroll(true)">
+    <ngx-typed-js *ngIf="typeStringIntro" class="section intro" [strings]="typeStringIntro" [cursorChar]="'_'" [typeSpeed]="30" (completed)="setAllowScroll(true)">
+      <div class="typing"></div>
+    </ngx-typed-js>
+
+    <div *ngIf="showCoding && typeStringCoding" class="section coding">
+      <div class="fade-img">
+        <img class="bottom" src="../../assets/images/coding.jpg" />
+        <img class="top" src="../../assets/images/coding_pix.jpg" />
+        <span><div>{{ 'PAGES.HOME.CODING_BUDDIES' | translate }}</div></span>
+      </div>
+      <br>
+      <ngx-typed-js [strings]="typeStringCoding" [cursorChar]="'_'" [typeSpeed]="30" (completed)="setAllowScroll(true)">
+        <div class="typing"></div>
+      </ngx-typed-js>
+      <br>
+      <button>{{ 'PAGES.HOME.RESUME' | translate }}</button>
+    </div>
+
+    <div *ngIf="showRunning && typeStringRunning" class="section running">
+      <div class="fade-img">
+        <img class="bottom" src="../../assets/images/running.jpg" />
+        <img class="top" src="../../assets/images/running_pix.jpg" />
+        <span>{{ 'PAGES.HOME.MARATHON' | translate }}</span>
+      </div>
+      <br>
+      <ngx-typed-js [strings]="typeStringRunning" [cursorChar]="'_'" [typeSpeed]="30" (completed)="setAllowScroll(true)">
+        <div class="typing"></div>
+      </ngx-typed-js>
+      <br>
+      <button>{{ 'PAGES.HOME.SUBSCRIBE' | translate }}</button>
+    </div>
+
+    <div *ngIf="showCooking && typeStringCooking" class="section cooking">
+      <div class="fade-img">
+        <img class="bottom" src="../../assets/images/cooking.jpg" />
+        <img class="top" src="../../assets/images/cooking_pix.jpg" />
+        <span>{{ 'PAGES.HOME.FOOD' | translate }}</span>
+      </div>
+      <br>
+      <ngx-typed-js [strings]="typeStringCooking" [cursorChar]="'_'" [typeSpeed]="30" (completed)="setAllowScroll(true)">
+        <div class="typing"></div>
+      </ngx-typed-js>
+      <br>
+      <button>{{ 'PAGES.HOME.SUBSCRIBE' | translate }}</button>
+    </div>
+
+    <ngx-typed-js *ngIf="showCredits && typeStringCredits" class="section credits" [strings]="typeStringCredits" [cursorChar]="'_'" [typeSpeed]="30" (completed)="setAllowScroll(true)">
       <div class="typing"></div>
     </ngx-typed-js>
 
@@ -18,11 +64,15 @@
     <div class="shadow"></div>
   </div>
 
-  <button class="blue"></button>
+  <button class="blue" (click)="runTo(0)"></button>
 
-  <button class="green"></button>
+  <button class="green" (click)="runTo(2000)"></button>
 
-  <button class="red"></button>
+  <button class="red" (click)="runTo(4000)"></button>
 
-  <button class="yellow"></button>
+  <button class="yellow" (click)="runTo(6000)"></button>
+
+  <div class="contact">
+    <button class="mail"></button> <button class="linkedin"></button> <button class="github"></button>
+  </div>
 </ion-content>

@@ -8,6 +8,7 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { ParallaxDirective } from './parallax-directive';
 import { CharacterDirective } from './character-directive';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { CharacterDirective } from './character-directive';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    NgxTypedJsModule
+    NgxTypedJsModule,
+    TranslateModule
   ],
   declarations: [HomePage, ParallaxDirective, CharacterDirective]
 })
