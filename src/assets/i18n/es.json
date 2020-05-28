@@ -1,15 +1,15 @@
 {
   "PAGES": {
       "HOME": {
-          "INTRO": "Hola,  soy  LuisK,  arquitecto de apps móviles y web y maratonista con alimentación basada en plantas.<br>Gracias por visitar mi sitio web!<br>Desplazate hacia la derecha para correr o dale click a algún botón y dino hará un pique hasta la sección correspondiente.<br>¡Dino es súper rápido!",
-          "CODING": "Actualmente soy Lead Architect en <a class=\"openforge\" href=\"https://openforge.io\" target=\"_blank\">OpenForge</a>.<br> En los últimos años he trabajado principalmente en ingeniería de software para aplicaciones móviles y web.<br> ¿Tienes ideas para una app? <a href=\"mailto:luiskcs89@gmail.com\">¡Contáctame!</a>",
-          "RUNNING": "También soy corredor.<br> Corrí mi primera maratón en Berlin el año pasado y este año estoy entrenando para Chicago.<br> ¿Te gusta hablar sobree entrenamiento o carreras? ¡Suscríbete a mi boletín de corredores con alimentación basada en plantas!`",
-          "COOKING": "...y me encanta cocinar y comer comida vegana.<br> Hice el curso de certificación profesional en Rouxbe.<br>¿Te gusta hablar de comidas deliciosas? ¡Suscríbete a mi boletín de corredores con alimentación basada en plantas!",
-          "CREDITS": "Gracias a:<br> - <a href=\"https://twitter.com/ScissorMarks\" target=\"_blank\">@ScissorMarks</a> por las animaciones de Dino<br> - <a href=\"https://twitter.com/ansimuz\" target=\"_blank\">Luis Zuno (@ansimuz)</a> por los fondos<br> Versión 0.0.1<br><br> ¿Encontraste algún bug? <a href=\"mailto:luiskcs89@gmail.com\">¡Contáctame!</a>",
+          "INTRO": "Hola,  soy  LuisK,  arquitecto de apps móviles y web y maratonista con alimentación basada en plantas.<br>Gracias por visitar mi sitio web!<br>Desplazate hacia la derecha para correr o dale click a algún botón y haré un pique hasta la sección correspondiente.<br>¡Ire tan rápido como pueda!",
+          "CODING": "Actualmente soy Lead Architect en <a class=\"openforge\" href=\"https://openforge.io\" target=\"_blank\">OpenForge</a>.<br> En los últimos años he trabajado principalmente en ingeniería de software para aplicaciones móviles y web.<br> ¿Tienes ideas para una app?",
+          "RUNNING": "También soy corredor.<br> Corrí mi primera maratón en Berlin el año pasado y este año estoy entrenando para Chicago.<br> ¿Te gusta hablar sobree entrenamiento o carreras?",
+          "COOKING": "...y me encanta cocinar y comer comida vegana.<br> Hice el curso de certificación profesional en Rouxbe.<br>¿Te gusta hablar de comidas deliciosas?!",
+          "CREDITS": "Gracias a:<br> - <a href=\"https://twitter.com/ansimuz\" target=\"_blank\">Luis Zuno (@ansimuz)</a> por los fondos<br> Versión 0.0.1<br><br> ¿Encontraste algún bug? <a href=\"mailto:luiskcs89@gmail.com\">¡Contáctame!</a>",
           "CODING_BUDDIES": "Compañeros de trabajo",
           "RESUME": "Ver mi Curriculum",
           "MARATHON": "Maratón de Berlin 2019",
-          "SUBSCRIBE": "Suscribirse",
+          "SUBSCRIBE": "Contáctame",
           "FOOD": "Aguacate a la parrilla"
       }
   }

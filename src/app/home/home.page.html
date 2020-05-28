@@ -39,7 +39,7 @@
         <div class="typing"></div>
       </ngx-typed-js>
       <br>
-      <button>{{ 'PAGES.HOME.SUBSCRIBE' | translate }}</button>
+      <button (click)="open('mailto:luiskcs89@gmail.com')">{{ 'PAGES.HOME.SUBSCRIBE' | translate }}</button>
     </div>
 
     <div *ngIf="showCooking && typeStringCooking" class="section cooking">
@@ -53,7 +53,7 @@
         <div class="typing"></div>
       </ngx-typed-js>
       <br>
-      <button>{{ 'PAGES.HOME.SUBSCRIBE' | translate }}</button>
+      <button (click)="open('mailto:luiskcs89@gmail.com')">{{ 'PAGES.HOME.SUBSCRIBE' | translate }}</button>
     </div>
 
     <ngx-typed-js *ngIf="showCredits && typeStringCredits" class="section credits" [strings]="typeStringCredits" [cursorChar]="'_'" [typeSpeed]="30" (completed)="setAllowScroll(true)">
@@ -73,6 +73,8 @@
   <button class="yellow" (click)="runTo(6000)"></button>
 
   <div class="contact">
-    <button class="mail"></button> <button class="linkedin"></button> <button class="github"></button>
+    <button class="mail" (click)="open('mailto:luiskcs89@gmail.com')"></button>
+    <button class="linkedin" (click)="open('https://www.linkedin.com/in/luiskcs89/')"></button>
+    <button class="github" (click)="open('https://github.com/luiskcs89')"></button>
   </div>
 </ion-content>

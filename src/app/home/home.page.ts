@@ -21,6 +21,8 @@ export class HomePage implements OnInit {
 
   allowScroll = true;
 
+  contactAnim: Animation;
+
   homeButtonAnimToTop: Animation;
   homeButtonOnTop = false;
 
@@ -77,9 +79,8 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
     this.createAnimations();
+    this.contactAnim.play();
     document.getElementById('container').addEventListener('scroll', (event) => {
-      console.log((event.target as HTMLElement).scrollLeft);
-
       const currentScroll = (event.target as HTMLElement).scrollLeft;
 
       if (currentScroll > 8000) {
@@ -268,6 +269,11 @@ export class HomePage implements OnInit {
   }
 
   createAnimations() {
+    this.contactAnim = this.animationCtrl.create()
+    .addElement(document.querySelector('.contact'))
+    .duration(200)
+    .fromTo('bottom', '-32px', '5px');
+
     this.homeButtonAnimToTop = this.animationCtrl.create()
     .addElement(document.querySelector('.blue'))
     .duration(1000)
@@ -324,5 +330,9 @@ export class HomePage implements OnInit {
         }
       }, 1);
     }
+  }
+
+  open(url) {
+    window.open(url, '_blank');
   }
 }

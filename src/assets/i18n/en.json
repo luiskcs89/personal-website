@@ -1,15 +1,15 @@
 {
   "PAGES": {
       "HOME": {
-          "INTRO": "Hi,  I  am  LuisK,  mobile  and  web  app  architect  and  plant  based  marathoner.<br>Welcome  to  my  website!<br>Scroll right to run or click a button and Dino will make a sprint to reach the desired section.<br>He is pretty fast!",
-          "CODING": "Currently I am the Lead Architect at <a class=\"openforge\" href=\"https://openforge.io\" target=\"_blank\">OpenForge</a>.<br> In the past few years I've worked mainly in software engineering for mobile and web apps.<br> Have any ideas or want to develop an app? Feel free to <a href=\"mailto:luiskcs89@gmail.com\">contact me!</a>",
-          "RUNNING": "I am also an avid runner.<br> I ran my first marathon last year in Berlin and currently training for Chicago 2020.<br> Want to talk about training or cool races? Subscribe to my plant-based running newsletter!`",
-          "COOKING": "...and I love cooking and eating vegan food.<br> I did the Professional Plant-Based Certification Course by Rouxbe.<br>Want to talk about awesome food? Subscribe to my plant-based running newsletter!",
-          "CREDITS": "Thanks to:<br> - <a href=\"https://twitter.com/ScissorMarks\" target=\"_blank\">@ScissorMarks</a> for the Dino animations<br> - <a href=\"https://twitter.com/ansimuz\" target=\"_blank\">Luis Zuno (@ansimuz)</a> for the backgrounds<br> Version 0.0.1<br><br> Found any bugs? <a href=\"mailto:luiskcs89@gmail.com\">contact me!</a>",
+          "INTRO": "Hi,  I  am  LuisK,  mobile  and  web  app  architect  and  plant  based  marathoner.<br>Welcome  to  my  website!<br>Scroll right to run or click a button and I will make a sprint to reach the desired section.<br>I will run as fast as I can!",
+          "CODING": "Currently I am the Lead Architect at <a class=\"openforge\" href=\"https://openforge.io\" target=\"_blank\">OpenForge</a>.<br> In the past few years I have worked mainly in software engineering for mobile and web apps.<br> Have any ideas or want to develop an app?",
+          "RUNNING": "I am also an avid runner.<br> I ran my first marathon last year in Berlin and currently training for Chicago 2020.<br> Want to talk about training or cool races?",
+          "COOKING": "...and I love cooking and eating vegan food.<br> I did the Professional Plant-Based Certification Course by Rouxbe.<br>Want to talk about awesome food?",
+          "CREDITS": "Thanks to:<br> - <a href=\"https://twitter.com/ansimuz\" target=\"_blank\">Luis Zuno (@ansimuz)</a> for the backgrounds<br> Version 0.0.1<br><br> Found any bugs? <a href=\"mailto:luiskcs89@gmail.com\">contact me!</a>",
           "CODING_BUDDIES": "Coding Buddies",
           "RESUME": "View my resume",
           "MARATHON": "Berlin Marathon 2019",
-          "SUBSCRIBE": "Subscribe",
+          "SUBSCRIBE": "Contact me",
           "FOOD": "Grilled avocado"
       }
   }

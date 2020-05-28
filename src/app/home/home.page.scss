@@ -93,8 +93,8 @@
 .fade-img {
   position: relative;
   margin: 0 auto;
-  height: 30vw;
-  width: 30vw;
+  height: 25vw;
+  width: 25vw;
   border: solid 20px;
 
   @media (max-width: 640px) {
@@ -231,33 +231,49 @@
 
 .character {
   position: sticky;
-  left: calc(50% - 5vh);
-  top: 87vh;
-  width: 10vh;
-  height: 10vh;
-  animation: moveX 3s steps(24) infinite;
+  left: calc(50% - 10vh);
+  top: 80vh;
+  width: 15vh;
+  height: 15vh;
+  
   z-index: 3;
   image-rendering: pixelated;
 
   &.run-r {
-    background-image : url("../../assets/character/character-run-r.png");
+    background-image : url("../../assets/character/character-run.png");
     background-size: cover;
+    animation: moveXRun 0.5s steps(8) infinite;
   }
 
   &.idle-r {
-    background-image : url("../../assets/character/character-idle-r.png");
+    background-image : url("../../assets/character/character-idle.png");
     background-size: cover;
+    animation: moveXIdle 2s steps(6) infinite;
   }
 
   &.run-l {
-    background-image : url("../../assets/character/character-run-l.png");
+    background-image : url("../../assets/character/character-run.png");
     background-size: cover;
+    animation: moveXRun 0.5s steps(8) infinite;
+    transform: scaleX(-1);
   }
 
   &.idle-l {
-    background-image : url("../../assets/character/character-idle-l.png");
+    background-image : url("../../assets/character/character-idle.png");
     background-size: cover;
+    animation: moveXIdle 2s steps(6) infinite;
+    transform: scaleX(-1);
   }
+}
+
+@keyframes moveXRun {
+  from{background-position-x:0px;}
+  to{background-position-x:-120vh;}
+}
+
+@keyframes moveXIdle {
+  from{background-position-x:0px;}
+  to{background-position-x:-90vh;}
 }
 
 .shadow {
@@ -272,15 +288,10 @@
   background-size: cover;
 }
 
-@keyframes moveX{
-  from{background-position-x:0px;}
-  to{background-position-x:-240vh;}
-}
-
 .contact {
   position: absolute;
   left: 0;
-  bottom: 5px;
+  bottom: -32px;
   height: 32px;
 }
 

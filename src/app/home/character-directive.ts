@@ -41,7 +41,7 @@ export class CharacterDirective {
             this.eleRef.nativeElement.classList.remove('idle-l');
             this.eleRef.nativeElement.classList.add('idle-r');
           }
-        }, 500);
+        }, 100);
     }, true);
   }
 
