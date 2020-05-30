@@ -25,7 +25,7 @@
         <div class="typing"></div>
       </ngx-typed-js>
       <br>
-      <button>{{ 'PAGES.HOME.RESUME' | translate }}</button>
+      <button (click)="open('https://luisk.io/cv-luis-carlos-chacon.pdf')">{{ 'PAGES.HOME.RESUME' | translate }}</button>
     </div>
 
     <div *ngIf="showRunning && typeStringRunning" class="section running">

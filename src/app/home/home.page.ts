@@ -53,31 +53,34 @@ export class HomePage implements OnInit {
   showCredits = false;
   creditsAnimFadeOut: Animation;
   creditsFadedOut = false;
+  interval;
 
   constructor(private animationCtrl: AnimationController, private translate: TranslateService) {
 
-    translate.get('PAGES.HOME.INTRO').subscribe((res: string) => {
-      this.typeStringIntro = [res];
-    });
-
-    translate.get('PAGES.HOME.CODING').subscribe((res: string) => {
-      this.typeStringCoding = [res];
-    });
-
-    translate.get('PAGES.HOME.RUNNING').subscribe((res: string) => {
-      this.typeStringRunning = [res];
-    });
-
-    translate.get('PAGES.HOME.COOKING').subscribe((res: string) => {
-      this.typeStringCooking = [res];
-    });
-
-    translate.get('PAGES.HOME.CREDITS').subscribe((res: string) => {
-      this.typeStringCredits = [res];
-    });
   }
 
   ngOnInit() {
+
+    this.translate.get('PAGES.HOME.INTRO').subscribe((res: string) => {
+      this.typeStringIntro = [res];
+    });
+
+    this.translate.get('PAGES.HOME.CODING').subscribe((res: string) => {
+      this.typeStringCoding = [res];
+    });
+
+    this.translate.get('PAGES.HOME.RUNNING').subscribe((res: string) => {
+      this.typeStringRunning = [res];
+    });
+
+    this.translate.get('PAGES.HOME.COOKING').subscribe((res: string) => {
+      this.typeStringCooking = [res];
+    });
+
+    this.translate.get('PAGES.HOME.CREDITS').subscribe((res: string) => {
+      this.typeStringCredits = [res];
+    });
+
     this.createAnimations();
     this.contactAnim.play();
     document.getElementById('container').addEventListener('scroll', (event) => {
@@ -271,8 +274,12 @@ export class HomePage implements OnInit {
   createAnimations() {
     this.contactAnim = this.animationCtrl.create()
     .addElement(document.querySelector('.contact'))
-    .duration(200)
-    .fromTo('bottom', '-32px', '5px');
+    .duration(500)
+    .keyframes([
+      { offset: 0 , bottom: '-32px' },
+      { offset: 0.6 , bottom: '25px' },
+      { offset: 1 , bottom: '5px' },
+    ]);
 
     this.homeButtonAnimToTop = this.animationCtrl.create()
     .addElement(document.querySelector('.blue'))
@@ -313,23 +320,27 @@ export class HomePage implements OnInit {
   }
 
   runTo(position) {
+    if (!this.interval) {
     const container = document.getElementById('container');
 
     if (container.scrollLeft < position) {
-      const interval = setInterval(() => {
+      this.interval = setInterval(() => {
         container.scrollTo(container.scrollLeft + 10, 0);
         if (container.scrollLeft >= position) {
-          clearInterval(interval);
+          clearInterval(this.interval);
+          this.interval = null;
         }
       }, 1);
     } else {
-      const interval = setInterval(() => {
+      this.interval = setInterval(() => {
         container.scrollTo(container.scrollLeft - 10, 0);
         if (container.scrollLeft <= position) {
-          clearInterval(interval);
+          clearInterval(this.interval);
+          this.interval = null;
         }
       }, 1);
     }
+  }
   }
 
   open(url) {
