@@ -1,16 +1,17 @@
 {
   "PAGES": {
       "HOME": {
-          "INTRO": "Hi,  I  am  LuisK,  mobile  and  web  app  architect  and  plant  based  marathoner.<br>Welcome  to  my  website!<br>Scroll right to run or click a button and I will make a sprint to reach the desired section.<br>I will run as fast as I can!",
-          "CODING": "Currently I am the Lead Architect at <a class=\"openforge\" href=\"https://openforge.io\" target=\"_blank\">OpenForge</a>.<br> In the past few years I have worked mainly in software engineering for mobile and web apps.<br> Have any ideas or want to develop an app?",
-          "RUNNING": "I am also an avid runner.<br> I ran my first marathon last year in Berlin and currently training for Chicago 2020.<br> Want to talk about training or cool races?",
-          "COOKING": "...and I love cooking and eating vegan food.<br> I did the Professional Plant-Based Certification Course by Rouxbe.<br>Want to talk about awesome food?",
+          "INTRO": "Hi,  I  am  LuisK,  full  stack  software engineer and  plant  based ultramarathoner.<br>Welcome  to  my  website!<br>Scroll right to run or click a button and I will make a sprint to reach the desired section.<br>I will run as fast as I can!",
+          "CODING": "Currently I am the Lead Software Engineer at <a class=\"openforge\" href=\"https://vert.run\" target=\"_blank\">Vert.run</a>.<br> In the past few years I have worked mainly in software engineering of mobile and web apps.",
+          "RUNNING": "I am also an avid runner.<br> I run marathons and ultramarathons.<br> I am currently training for Zugspitz Ultra trail 68K.",
+          "COOKING": "...and I love cooking and eating vegan food.<br> I did the Professional Plant-Based Certification Course by Rouxbe.",
           "CREDITS": "Thanks to:<br> - <a href=\"https://twitter.com/ansimuz\" target=\"_blank\">Luis Zuno (@ansimuz)</a> for the backgrounds<br> Version 0.0.1<br><br> Found any bugs? <a href=\"mailto:luiskcs89@gmail.com\">contact me!</a>",
           "CODING_BUDDIES": "Coding Buddies",
-          "RESUME": "View my resume",
+          "RESUME": "More about my work experience",
           "MARATHON": "Berlin Marathon 2019",
-          "SUBSCRIBE": "Contact me",
-          "FOOD": "Grilled avocado"
+          "SUBSCRIBE": "See my race results",
+          "FOOD": "Grilled avocado",
+          "FOOD_PICS": "Just some food pictures"
       }
   }
 }
