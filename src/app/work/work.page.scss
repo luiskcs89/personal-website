@@ -1,0 +1,70 @@
+.main {
+  background-color: black;
+  width: 100%;
+  min-height: 100%;
+  padding: 30px 20px 40px;
+}
+
+#container {
+  font-family: 'PixelSplitter-Bold';
+  color: #ffffff;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 24px;
+  padding: 10px;
+
+  .title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+.images {
+  display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+.image {
+  max-width: 20vw;
+  border: solid 20px;
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.contact {
+  position: fixed;
+    left: 5px;
+    bottom: 10px;
+    height: 32px;
+}
+
+.mail {
+  background: url("../../assets/buttons/mail.png") repeat center;
+  background-size: contain;
+  z-index: 3;
+  width: 32px;
+  height: 32px;
+  margin: 5px;
+}
+
+.linkedin {
+  background: url("../../assets/buttons/linkedin.png") repeat center;
+  background-size: contain;
+  z-index: 3;
+  width: 32px;
+  height: 32px;
+  margin: 5px;
+}
+
+.github {
+  background: url("../../assets/buttons/github.png") repeat center;
+  background-size: contain;
+  z-index: 3;
+  width: 32px;
+  height: 32px;
+  margin: 5px;
+}

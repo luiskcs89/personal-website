@@ -12,6 +12,12 @@
           "SUBSCRIBE": "Ver mis resultados de carreras",
           "FOOD": "Aguacate a la parrilla",
           "FOOD_PICS": "Algunas fotos de comida"
+      },
+      "WORK": {
+        "EDUCATION_TITLE": "Educacion",
+        "EDUCATION_TEXT": "Tengo un bachillerato en Ciencas de la Computacion de la Universidad de Costa Rica y una Maestria en Ingenieria de Software de la Libera Universita di Bolzano y la Universidad Politecnica de Madrid. Hice mi Maestria con una beca total por parte de la Union Europea.",
+        "WORK_TITLE": "Trabajo",
+        "WORK_TEXT": "He trabajado para startups, instituciones publicas y corporaciones como Openforge, Vert.run, Intertec International, y como freelance, desarrollando todo tipo de productos tech como web apps, apps moiles y video juegos. Tengo experiencia en varias tecnologias, para nombrar algunas: Ionic Framework, React, Angular, Capacitor, Firebase, AWS."
       }
   }
 }

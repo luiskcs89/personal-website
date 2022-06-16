@@ -9,9 +9,15 @@
           "CODING_BUDDIES": "Coding Buddies",
           "RESUME": "More about my work experience",
           "MARATHON": "Berlin Marathon 2019",
-          "SUBSCRIBE": "See my race results",
+          "SUBSCRIBE": "Lets talk about running",
           "FOOD": "Grilled avocado",
-          "FOOD_PICS": "Just some food pictures"
+          "FOOD_PICS": "Lets talk about food"
+      },
+      "WORK": {
+        "EDUCATION_TITLE": "Education",
+        "EDUCATION_TEXT": "I have a Bachelors degree on Computer Science from Universidad de Costa Rica and a Masters degree in Software Engineering from Libera Universita di Bolzano and Universidad Politecnica de Madrid. I did my Masters degree with a full scolarship from the European Union.",
+        "WORK_TITLE": "Work",
+        "WORK_TEXT": "I have worked for startups, public institutions and corporations like Openforge, Vert.run, Intertec International, and freelance, building all sorts of different tech products such as web apps, mobile apps and video games. I have experience in a diverse array of technologies, to name a few: Ionic Framework, React, Angular, Capacitor, Firebase, AWS."
       }
   }
 }

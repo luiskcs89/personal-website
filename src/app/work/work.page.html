@@ -1,0 +1,23 @@
+<ion-content [fullscreen]="true" class="main">
+  <div class="main">
+  <div id="container" [class.scroll]="allowScroll" class="pixel-border">
+    <div class="title">{{ 'PAGES.WORK.EDUCATION_TITLE' | translate }}</div>
+    <div>{{ 'PAGES.WORK.EDUCATION_TEXT' | translate }}</div>
+
+    <div class="images">
+      <img class="image" src="../../assets/images/ucr.jpg" />
+      <img class="image" src="../../assets/images/unibz.jpg" />
+      <img class="image" src="../../assets/images/upm.jpg" />
+    </div>
+
+    <div class="title">{{ 'PAGES.WORK.WORK_TITLE' | translate }}</div>
+    <div>{{ 'PAGES.WORK.WORK_TEXT' | translate }}</div>
+  </div>
+
+  <div class="contact">
+    <button class="mail" (click)="open('mailto:luiskcs89@gmail.com')"></button>
+    <button class="linkedin" (click)="open('https://www.linkedin.com/in/luiskcs89/')"></button>
+    <button class="github" (click)="open('https://github.com/luiskcs89')"></button>
+  </div>
+</div>
+</ion-content>

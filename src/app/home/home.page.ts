@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Animation, AnimationController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -7,7 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage implements OnInit {
+export class HomePage {
 
   typeStringIntro = null;
 
@@ -55,11 +56,11 @@ export class HomePage implements OnInit {
   creditsFadedOut = false;
   interval;
 
-  constructor(private animationCtrl: AnimationController, private translate: TranslateService) {
+  constructor(private animationCtrl: AnimationController, private translate: TranslateService, private router: Router) {
 
   }
 
-  ngOnInit() {
+  ionViewWillEnter() {
 
     this.translate.get('PAGES.HOME.INTRO').subscribe((res: string) => {
       this.typeStringIntro = [res];
@@ -345,5 +346,9 @@ export class HomePage implements OnInit {
 
   open(url) {
     window.open(url, '_blank');
+  }
+
+  goTo(nav) {
+    this.router.navigate([nav]);
   }
 }
